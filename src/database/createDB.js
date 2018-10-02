@@ -5,7 +5,7 @@ import { User } from '../models/usersModel'
 
 // Creating users
 let password = User.encryptPassword("holamundo");
-let userTest1 = new User("","Ramiro Fernando", "Pat Chan", "ramirofpc@gmail.com", password.passwordHash, password.salt)
+let userTest1 = new User("","noIdea", "whatImdoing", "somefake@info.com", password.passwordHash, password.salt)
 delete userTest1._id;
 
 //Establishing connnection with db
