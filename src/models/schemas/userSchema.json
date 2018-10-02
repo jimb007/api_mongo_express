@@ -1,0 +1,61 @@
+    {
+    "type": "object",
+    "properties": {
+        "_id": {
+            "type": "string",
+            "description": "id from user"
+        },
+        "firstName": {
+            "type": "string",
+            "description": "string mandatory field"
+        },
+        "lastName": {
+            "type": "string",
+            "description": "string mandatory field"
+        },
+        "email": {
+            "type": "string",
+            "format": "email",
+            "description": "string mandatory field"
+        },
+        "password": {
+            "type": "string",
+            "minLength": 6,
+            "description": "string mandatory field"
+        },
+        "salt": {
+            "type": "string",
+            "description": "string mandatory field"
+        },
+        "address": {
+            "type": "string",
+            "description": "string optional field"
+        },
+        "birth": {
+            "type": "string",
+            "format": "date",
+            "description": "date optional field"
+        },
+        "phone": {
+            "type": "string",
+            "minLength": 10,
+            "description": "string optional field"
+        }
+    },
+    "additionalProperties":false,
+    "oneOf": [
+        {
+            "required": [
+                "firstName",
+                "lastName",
+                "email",
+                "password"
+            ]
+        },
+        {
+            "required": [
+                "_id"
+            ]
+        }
+    ]
+}

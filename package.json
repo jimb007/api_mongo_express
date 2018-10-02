@@ -1,0 +1,33 @@
+{
+  "name": "arod_uva_api",
+  "version": "1.0.0",
+  "description": "rest api with node, express and mongodb",
+  "main": "./src/index.js",
+  "scripts": {
+    "clean": "rmdir build /s /q  && mkdir build",
+    "build": "babel ./src  -d ./build --copy-files",
+    "startBuiltProject": " node ./build/index.js ",
+    "createDB":"babel-node  ./src/database/createDB ",
+    "enableDebug": "babel ./src  -d ./build -s",    
+    "start": "nodemon ./src/index.js --exec babel-node -e js"    
+  },
+  "author": "esevato",
+  "license": "ISC",
+  "dependencies": {
+    "ajv": "^6.5.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongodb": "^3.1.4",
+    "mongoose": "^5.2.7",
+    "nodemon": "^1.18.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",    
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
