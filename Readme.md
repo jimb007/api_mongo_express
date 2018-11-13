@@ -100,6 +100,10 @@ This command executes nodemon so everytime you make a change the script will run
 
 
 # Explaining some features
-Coming soon....
-
+## Mongo Service
+Starting mongo as service in windows may be tricky or annoying (there is a long command line to execute it) so I decide to include a little bat script in case you need to run a mongo service. 
+Whithin the directory you will find :
+- mongod_config.bat ---> Thi script will ass for administrative grants and will start service
+- mongod.cfg ---> You can customize your mongo service, for instance, the db path, file to save logs, enable secutiry, etc. So feel free to add more configurations as you needed it [more info here](https://docs.mongodb.com/v3.2/reference/configuration-options/)
+- mongoServiceInstructions.md ---> Line commands in case you want to stop or start service manually
 
