@@ -10,8 +10,8 @@ const PORT = settings.express.port;
 
 
 //mongo connection
-connection().then((result)=>{
-    console.log(result)
+connection().then((clientInstance,message)=>{
+    console.log(message)
 }).catch((err)=>{
     console.log(err)
 });

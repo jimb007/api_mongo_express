@@ -20,7 +20,10 @@ export const connection = () => {
             }
             else {
                 db = client.db();
-                res(`${client.db().databaseName} succesfully connected`)
+                let clientInstance={};
+                clientInstance['message']=`${client.db().databaseName} succesfully connected`;
+                clientInstance['client']=client;
+                res(clientInstance.client,clientInstance.message)
             }
         })
     })
