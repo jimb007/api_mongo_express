@@ -18,9 +18,9 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 
 SET mongoConfig=mongod.cfg
-SET mongoDirectory=C:\mongo_arod_db\
-SET mongoDataPath=c:\mongo_arod_db\data\db
-SET mongoLogPath=c:\mongo_arod_db\data\log
+SET mongoDirectory=C:\mongo_api_db\
+SET mongoDataPath=c:\mongo_api_db\data\db
+SET mongoLogPath=c:\mongo_api_db\data\log
 
 if not exist %mongoDataPath% ( mkdir  %mongoDataPath% )
 if not exist %mongoLogPath% ( mkdir %mongoLogPath% )
